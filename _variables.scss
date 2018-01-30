@@ -1,0 +1,75 @@
+// variables
+$gutter-size: 0.5rem;
+
+// limits
+$limit-width-tiny: 600px;
+$limit-width-small: 800px;
+$limit-width-medium: 1000px;
+$limit-width-large: 1200px;
+$limit-width-huge: 1400px;
+  
+// CONTAINER
+// padding
+$container-padding-tiny: 1rem;
+$container-padding-small: 2.5rem;
+$container-padding-medium: 5rem;
+$container-padding-large: 8rem;
+$container-padding-huge: 12rem;
+
+$medium-width: 960px;
+$small-width: 650px;
+
+
+
+// COLORS
+
+// greyscale
+$white: #fff;
+$black: #000;
+$gray: #999;
+$light-gray: #f1f1f1;
+$dark-gray: #333;
+
+// theme
+$theme-color-1-name: "navy"; // name to put in html attributes to pick this color
+$theme-color-1: #282f39; 
+$theme-color-1-text: $white; // default text color to pair with this theme color
+
+$theme-color-2-name: "brown";
+$theme-color-2: #595241;
+$theme-color-2-text: $white;
+
+$theme-color-3-name: "tan";
+$theme-color-3: #f7f1e3;
+$theme-color-3-text: $white;
+
+$theme-color-4-name: "yellow";
+$theme-color-4: #ffba38;
+$theme-color-4-text: $white;
+
+$theme-color-5-name: "green";
+$theme-color-5: #BEDB39;
+$theme-color-5-text: $white;
+
+// Margins
+$margin-tiny: 5px;
+$margin-small: 10px;
+$margin-medium: 20px;
+$margin-large: 30px;
+$margin-huge: 40px;
+
+*[sx-margin="tiny"] {
+    margin-bottom: $margin-tiny;
+}
+*[sx-margin="small"] {
+    margin-bottom: $margin-small;
+}
+*[sx-margin="medium"] {
+    margin-bottom: $margin-medium;
+}
+*[sx-margin="large"] {
+    margin-bottom: $margin-large;
+}
+*[sx-margin="huge"] {
+    margin-bottom: $margin-huge;
+}

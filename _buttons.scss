@@ -1,0 +1,148 @@
+$button-padding-tiny: 5px 10px;
+$button-padding-small: 8px 12px;
+$button-padding-medium: 10px 16px;
+$button-padding-large: 16px 30px;
+$button-padding-huge: 20px 36px;
+
+.uber.button {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Lato';
+    font-weight: bold;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    align-self: initial;
+    transition: background-color 0.3s, color 0.3s;
+
+    // COLORS
+    // theme colors
+    &[data-color="#{$theme-color-1-name}"] {
+        background-color: $theme-color-1;
+        color: $theme-color-1-text;
+
+        &:hover {
+            background-color: lighten($theme-color-1, 10%);
+        }
+    }
+    &[data-color="#{$theme-color-2-name}"] {
+        background-color: $theme-color-2;
+        color: $theme-color-2-text;
+
+        &:hover {
+            background-color: lighten($theme-color-2, 10%);
+        }
+    }
+    &[data-color="#{$theme-color-3-name}"] {
+        background-color: $theme-color-3;
+        color: $theme-color-3-text;
+
+        &:hover {
+            background-color: lighten($theme-color-3, 10%);
+        }
+    }
+    &[data-color="#{$theme-color-4-name}"] {
+        background-color: $theme-color-4;
+        color: $theme-color-4-text;
+
+        &:hover {
+            background-color: lighten($theme-color-4, 10%);
+        }
+    }
+    &[data-color="#{$theme-color-5-name}"] {
+        background-color: $theme-color-5;
+        color: $theme-color-5-text;
+
+        &:hover {
+            background-color: lighten($theme-color-5, 10%);
+        }
+    }
+
+    &[data-color="black"] {
+        background-color: $black;
+        color: $white;
+
+        &:hover {
+            background-color: lighten($black, 10%);
+            color: $black;
+        }
+    }
+
+    // OPTIONS
+    // inverted
+    // rounded
+    // circular
+    // uppercase
+    // lowercase
+    &[data-options~="inverted"] {
+        border: 2px solid $black;
+        color: $black;
+        background: none;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+
+        &[data-color="black"] {
+            border-color: $black;
+            color: $black;
+
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
+        &[data-color="white"] {
+            border-color: $white;
+            color: $white;
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+    // shapes
+    &[data-options~="rounded"] {
+        border-radius: 0.4em;
+    }
+    &[data-options~="square"] {
+        border-radius: 0;
+    }
+    // case
+    &[data-options~="uppercase"] {
+        text-transform: uppercase;
+    }
+    &[data-options~="lowercase"] {
+        text-transform: lowercase;
+    }
+
+    // SIZES
+    &[data-size="tiny"] {
+        font-size: 1rem;
+        padding: $button-padding-tiny;
+    }
+    &[data-size="small"] {
+        font-size: 1.4rem;
+        padding: $button-padding-small;        
+    }
+    &[data-size="medium"] {
+        font-size: 1.6rem;
+        padding: $button-padding-medium;        
+    }
+    &[data-size="large"] {
+        font-size: 2rem;
+        padding: $button-padding-large;        
+    }
+    &[data-size="huge"] {
+        font-size: 2.5rem;
+        padding: $button-padding-huge;        
+    }
+
+    // CASE
+    &[data-case="upper"] {
+        text-transform: uppercase;
+    }
+}

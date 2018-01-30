@@ -1,0 +1,227 @@
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -$gutter-size;
+    margin-right: -$gutter-size;
+    max-width: 1000px;
+    width: 90%;
+
+    // NUMBER OF COLUMNS
+    &[data-columns~="2"] {
+        & > .column {
+            width: 50%;
+        }
+    }
+    &[data-columns~="3"] {
+        & > .column {
+            width: percentage(1/3);
+        }
+    }
+    &[data-columns~="4"] {
+        & > .column {
+            width: 25%;
+        }
+    }
+    &[data-columns~="5"] {
+        & > .column {
+            width: 20%;
+        }
+    }
+
+    // ALIGNMENT
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        padding-left: $gutter-size;
+        padding-right: $gutter-size;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        
+        // COLUMN WIDTH
+        &[data-width~="1"] {
+            width: 100%;
+        }
+        &[data-width~="1/2"] {
+            width: 50%;
+        }
+        &[data-width~="1/3"] {
+            width: percentage(1/3);
+        }
+        &[data-width~="2/3"] {
+            width: percentage(2/3);
+        }
+        &[data-width~="1/4"] {
+            width: 25%;
+        }
+        &[data-width~="3/4"] {
+            width: 75%;
+        }
+        &[data-width~="1/5"] {
+            width: 20%;
+        }
+        &[data-width~="2/5"] {
+            width: 40%;
+        }
+        &[data-width~="3/5"] {
+            width: 60%;
+        }
+        &[data-width~="4/5"] {
+            width: 80%;
+        }
+        
+        // order
+        &[data-order~="first"] {
+            order: -100;
+        }
+        &[data-order~="last"] {
+            order: 100;
+        }
+        
+        // alignment
+        &[data-align~="center"] {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        &[data-column~="right"] {
+            text-align: right;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+}
+
+// MEDIUM SCREENS
+@media screen and (max-width: $medium-width) {
+    html {
+        font-size: 13px;
+    }
+    .row {
+        // reverse order
+        &[data-order~="m-reverse"] {
+            flex-direction: row-reverse;
+        }
+        
+        // number of columns
+        &[data-columns~="m-4"] {
+            & > .column {
+                width: percentage(1/4);
+            }
+        }
+        &[data-columns~="m-3"] {
+            & > .column {
+                width: percentage(1/3);
+            }
+        }
+        &[data-columns~="m-2"] {
+            & > .column {
+                width: 50%;
+            }
+        }
+        &[data-columns~="m-1"] {
+            & > .column {
+                width: 100%;
+            }
+        }
+        
+        .column {
+            // column width
+            &[data-width~="m-1"] {
+                width: 100%;
+            }
+            &[data-width~="m-1/2"] {
+                width: 50%;
+            }
+            &[data-width~="m-1/3"] {
+                width: percentage(1/3);
+            }
+            &[data-width~="m-2/3"] {
+                width: percentage(2/3);
+            }
+            &[data-width~="m-1/4"] {
+                width: 25%;
+            }
+            &[data-width~="m-3/4"] {
+                width: 75%;
+            }
+            &[data-width~="m-1/5"] {
+                width: 20%;
+            }
+            &[data-width~="m-2/5"] {
+                width: 40%;
+            }
+            &[data-width~="m-3/5"] {
+                width: 60%;
+            }
+            &[data-width~="m-4/5"] {
+                width: 80%;
+            }
+            
+            // alignment
+            &[data-align~="m-center"] {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+// SMALL SCREENS
+@media screen and (max-width: $small-width) {
+    html {
+        font-size: 10px;
+    }
+    .row {
+        // reverse order
+        &[data-order~="s-reverse"] {
+        flex-direction: row-reverse;
+        }
+        
+        // number of columns
+        &[data-columns~="s-1"] {
+        & > .column {
+            width: 100%;
+        }
+        }
+        &[data-columns~="s-2"] {
+        & > .column {
+            width: 100%;
+        }
+        }
+        &[data-columns~="s-3"] {
+        & > .column {
+            width: 100%;
+        }
+        }
+    }
+
+    .column {
+        // COLUMN WIDTH
+        &[data-width~="s-1"] {
+        width: 100%;
+        }
+        &[data-width~="s-1/2"] {
+        width: 50%;
+        }
+        &[data-width~="s-1/3"] {
+        width: percentage(1/3);
+        }
+        &[data-width~="s-2/3"] {
+        width: percentage(2/3);
+        }
+        &[data-width~="s-1/4"] {
+        width: 25%;
+        }
+        &[data-width~="s-3/4"] {
+        width: 75%;
+        }
+    }
+}
